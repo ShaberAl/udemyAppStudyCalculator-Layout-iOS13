@@ -16,16 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-D1-78X">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-D1-78X">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="128"/>
-                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8J0-7K-pn0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD">
+                                                <rect key="frame" x="20" y="0.0" width="335" height="128"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="top" secondItem="8J0-7K-pn0" secondAttribute="top" id="Bf5-xT-HPT"/>
+                                            <constraint firstAttribute="bottom" secondItem="gC2-i9-XzD" secondAttribute="bottom" id="YSl-UH-yYn"/>
+                                            <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="jxm-Hk-vix"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="8J0-7K-pn0" secondAttribute="leading" constant="20" id="r4W-5c-0qa"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-Lm-tpZ">
                                         <rect key="frame" x="0.0" y="130" width="375" height="128"/>
                                         <subviews>
@@ -209,20 +220,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="hy6-xG-boJ" firstAttribute="leading" secondItem="3bN-D1-78X" secondAttribute="leading" id="1Qg-8p-87B"/>
-                                    <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="EAe-Rr-m2X"/>
-                                    <constraint firstItem="ONw-l7-CpR" firstAttribute="leading" secondItem="3bN-D1-78X" secondAttribute="leading" id="G2M-Dc-YJF"/>
-                                    <constraint firstAttribute="trailing" secondItem="J2Z-Lm-tpZ" secondAttribute="trailing" id="NZ1-HZ-XFh"/>
-                                    <constraint firstAttribute="trailing" secondItem="ONw-l7-CpR" secondAttribute="trailing" id="RaU-BC-0cj"/>
-                                    <constraint firstItem="J2Z-Lm-tpZ" firstAttribute="leading" secondItem="3bN-D1-78X" secondAttribute="leading" id="Y9T-1e-uX5"/>
-                                    <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="3bN-D1-78X" secondAttribute="leading" constant="20" id="a6R-td-DAc"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dvf-TQ-qL9" secondAttribute="trailing" id="bTU-sr-Uyy"/>
-                                    <constraint firstAttribute="trailing" secondItem="O1s-EW-OWC" secondAttribute="trailing" id="ekm-N1-F1i"/>
-                                    <constraint firstItem="Dvf-TQ-qL9" firstAttribute="leading" secondItem="3bN-D1-78X" secondAttribute="leading" id="nCp-9Y-gb5"/>
-                                    <constraint firstAttribute="trailing" secondItem="hy6-xG-boJ" secondAttribute="trailing" id="oxQ-jS-YRc"/>
-                                    <constraint firstItem="O1s-EW-OWC" firstAttribute="leading" secondItem="3bN-D1-78X" secondAttribute="leading" id="uHj-Gl-Ho0"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ocv-dr-WMp"/>
